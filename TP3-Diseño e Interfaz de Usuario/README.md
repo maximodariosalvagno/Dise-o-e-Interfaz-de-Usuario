@@ -31,7 +31,7 @@ a partir del Ejercicio 5 (donde se introduce el CSS externo), tambien su
 - **Ejercicio 19**: el multi-step se resolvio con el truco de radio buttons
   ocultos + selector `~` (sin `:target` ni JavaScript), y la validacion
   visual usa `:invalid` / `:valid` combinados con `:not(:placeholder-shown)`
-  para no marcar los campos en rojo antes de que el usuario escriba.
+  para no marcar los campos en rojo antes de que el usuario escriba.                                                                                               
 - **Ejercicio 20**: integra Flexbox (navbar, formulario) y Grid (galeria de
   productos) en el mismo sitio, variables CSS globales, dos media queries
   (900px y 600px), una unica animacion de entrada en el hero (siguiendo el
