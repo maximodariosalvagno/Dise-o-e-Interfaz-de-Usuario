@@ -1,0 +1,22 @@
+.card {
+  background-color: #fff8e7;
+  border: 1px solid #d8c39a;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#destacado {
+  background-color: #e9f1ea;
+  border: 2px dashed #3d5a47;
+  padding: 1rem;
+}
+
+.card p {
+  color: #7a4a1f;
+  font-style: italic;
+}
+
+span {
+  font-weight: bold;
+  color: #c98a2c;
+}
