@@ -38,4 +38,4 @@ a partir del Ejercicio 5 (donde se introduce el CSS externo), tambien su
   criterio de usar la animacion en un solo momento, no repetida en cada
   tarjeta) y HTML semantico (`header`, `main`, `section`, `footer`). El CSS
   esta dividido en secciones numeradas y comentadas.
-- Las imagenes usan `
+- 
