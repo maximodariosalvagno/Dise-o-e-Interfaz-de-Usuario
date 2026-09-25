@@ -1,0 +1,258 @@
+:root {
+  --color-fondo: #fff6e4;
+  --color-texto: #241b12;
+  --color-primario: #7a4a1f;
+  --color-secundario: #c98a2c;
+  --color-acento: #4b6b4f;
+  --espaciado: 1rem;
+  --radio-borde: 10px;
+  --fuente-titulo: Georgia, 'Times New Roman', serif;
+  --fuente-texto: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario);
+}
+
+/* --------------------------------------------
+   3. NAVBAR FIJA (Flexbox)
+   -------------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  padding: 1rem 2rem;
+}
+
+.navbar .logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--color-fondo);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--color-secundario);
+}
+
+.hero {
+  margin-top: 60px;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background:
+    linear-gradient(rgba(36, 27, 18, 0.55), rgba(36, 27, 18, 0.55)),
+    url("https://picsum.photos/seed/chipas-hero/1200/700") center/cover no-repeat;
+}
+
+.hero-texto {
+  color: #fff6e4;
+  max-width: 600px;
+  animation: aparecer 0.9s ease-out 1; /* unico momento animado de la pagina */
+}
+
+.hero-texto h1 {
+  color: #fff6e4;
+  font-size: 2.4rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radio-borde);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.productos {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.producto {
+  background-color: #fffaf0;
+  border: 1px solid #d8c39a;
+  border-radius: var(--radio-borde);
+  padding: 1rem;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.precio {
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+
+.testimonios {
+  padding: 3rem 2rem;
+  background-color: #f2e8d0;
+  text-align: center;
+}
+
+.carrusel {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  margin-top: 1.5rem;
+}
+
+.testimonio {
+  scroll-snap-align: center;
+  flex: 0 0 280px;
+  background-color: #fffaf0;
+  border-radius: var(--radio-borde);
+  padding: 1.2rem;
+  margin: 0;
+}
+
+.testimonio cite {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--color-acento);
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+.contacto {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.form-contacto {
+  max-width: 420px;
+  margin: 1.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 0.6rem;
+  border: 1px solid #d8c39a;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+}
+
+.form-contacto button {
+  background-color: var(--color-acento);
+  color: #fff6e4;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.footer {
+  background-color: var(--color-texto);
+  color: #fff6e4;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+
+@media (max-width: 900px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .hero {
+    margin-top: 90px;
+  }
+
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonio {
+    flex: 0 0 220px;
+  }
+}

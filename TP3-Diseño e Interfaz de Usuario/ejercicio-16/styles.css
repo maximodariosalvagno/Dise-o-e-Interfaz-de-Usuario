@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 1.5rem;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #fdf6e9;
+  border-top: 6px solid #7a4a1f;
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarjeta-animada {
+  margin-top: 2rem;
+  max-width: 350px;
+  padding: 1.5rem;
+  background-color: #fdf6e9;
+  border: 1px solid #d8c39a;
+  border-radius: 8px;
+  animation: aparecer 0.8s ease-out 1;  
+}
